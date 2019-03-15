@@ -4,8 +4,8 @@ require './app/services/translate_service_yandex'
 
 describe "translation word" do
     before do 
-      @word_pt = "Word" 
-      @word_en = "Palavra" 
+      @word_en = "Word" 
+      @word_pt = "Palavra" 
     end
   
     it "translation pt-br to eng" do
