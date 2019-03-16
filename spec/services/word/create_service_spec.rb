@@ -25,8 +25,8 @@ describe WordModule::CreateService do
 
       # verificate if description and language is present in database
       it "Description and language is present in database" do
-        expect(Message.last.description).to match(@description)
-        expect(Message.last.language).to match(@language)
+        expect(Word.last.description).to match(@description)
+        expect(Word.last.language).to match(@language)
       end
     end
   end
