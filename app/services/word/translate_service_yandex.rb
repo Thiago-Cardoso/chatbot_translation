@@ -10,11 +10,11 @@ class TranslateServiceYandex
 
   def translate
     begin
-      translate_api_url = "https://translate.yandex.net/api/v1.5/tr.json/translate?"
-      url_yandex = "#{translate_api_url}key=#{@key}&lang=#{@language}"
+      api_url = "https://translate.yandex.net/api/v1.5/tr.json/translate?"
+      url = "#{api_url}key=#{@key}&lang=#{@language}"
 
-      # res = RestClient.post url_yandex, text: @text.to_json, :accept => :json 
-      res = RestClient.post(url_yandex, {text: @text})
+
+      res = RestClient.post(url, {text: @text})
       value = JSON.parse(res.body)["text"][0]
       
     rescue RestClient::ExceptionWithResponse => e
