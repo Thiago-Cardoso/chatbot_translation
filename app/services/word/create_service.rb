@@ -15,3 +15,5 @@ module WordModule
       end
     end
   end
+
+  #https://chatbottranslation.herokuapp.com/webhook   
